@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  border: none;
+  margin: 0;
+  font-family: "Cursed Timer ULiL", sans-serif;
+}
+
+body {
+  background-color: #030712;
+  padding: 1rem;
+}
+
+h3 {
+  color: white;
+  font-family: "Verdana";
+  font-size: 2.5rem;
+}
+
+p {
+  font-size: 5rem;
+  line-height: 5rem;
+  width: 100%;
+}
+
+button {
+  background-color: transparent;
+  width: 2.813rem;
+  height: 2.813rem;
+  color: white;
+  border: #364153 2px solid;
+  border-radius: 0.313rem;
+  font-size: 1.125rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+button:hover {
+  transform: scale(1.5);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.button-container {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 2rem;
+}
+
+.scoreboard {
+  color: #f94f6d;
+  background-color: #172030;
+  border-radius: 0.313rem;
+  width: 100%;
+  max-width: 12.688rem;
+  height: 7.813rem;
+  text-align: center;
+  padding: 1rem;
+  border: 3px solid #0000;
+}
+
+@keyframes rotate {
+  to {
+    --angle: 360deg;
+  }
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+/* Utility-classes ( I love Tailwind ) */
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.gap-1 {
+  gap: 1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Media queries */
+
+@media screen and (min-width: 640px) {
+  .container {
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+  }
+}
