@@ -78,8 +78,7 @@ button:hover {
   border: 0.15rem solid transparent;
   border-image: linear-gradient(var(--angle), #64748b, #1e293b) 1;
   box-shadow: 0 0 10px #64748b, 0 0 20px #1e293b;
-
-  animation: 5s rotate linear infinite;
+  animation: 2s rotate linear infinite;
 }
 
 @keyframes rotate {
