@@ -7,8 +7,12 @@
 }
 
 body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #030712;
   padding: 1rem;
+  min-height: 100vh;
 }
 
 h3 {
@@ -25,18 +29,20 @@ p {
 
 button {
   background-color: transparent;
-  width: 2.813rem;
   height: 2.813rem;
   color: white;
   border: #364153 2px solid;
   border-radius: 0.313rem;
   font-size: 1.125rem;
   cursor: pointer;
-  transition: transform 0.2s;
+  transition: transform 0.2s ease;
+  padding: 0.5rem;
+  margin: 2rem 0 0;
 }
 
 button:hover {
   transform: scale(1.5);
+  border: white 2px solid;
 }
 
 .container {
@@ -48,19 +54,30 @@ button:hover {
 .button-container {
   display: flex;
   gap: 0.8rem;
-  margin-top: 2rem;
+  margin-top: 0.5rem 0 0 0;
+}
+
+.reset-button {
+  margin: 0;
 }
 
 .scoreboard {
   color: #f94f6d;
   background-color: #172030;
   border-radius: 0.313rem;
-  width: 100%;
-  max-width: 12.688rem;
+  max-width: 18.688rem;
   height: 7.813rem;
   text-align: center;
   padding: 1rem;
   border: 3px solid #0000;
+}
+
+.winner-animation {
+  background: #172030;
+  border: 0.35rem solid transparent;
+  border-image: linear-gradient(var(--angle), #64748b, #1e293b) 1;
+
+  animation: 5s rotate linear infinite;
 }
 
 @keyframes rotate {
@@ -121,8 +138,12 @@ button:hover {
 
 @media screen and (min-width: 640px) {
   .container {
-    align-items: center;
-    justify-content: space-evenly;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .scoreboard {
+    width: 100%;
   }
 }
